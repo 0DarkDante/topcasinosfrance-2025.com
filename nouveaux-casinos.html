@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Senligne Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="responsible-block">
+        <div class="container">
+          <div class="age-num">18+</div>
+          <p>
+            Nous vous encourageons à jouer de manière responsable. Vous pouvez
+            trouver des lignes directrices sur
+            <a href="https://casinosenlignepro.com/responsible.php">notre page</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="header">
+        <div class="container">
+          <a href="./index.html"><h3>Casino Senligne Pro</h3></a>
+<div class="nav">
+  <ul>
+    <li><a href="./paiement-rapide.html">Paiement Rapide</a></li>
+    <li><a href="./sites-populaires-france.html">Sites Populaires en France</a></li>
+    <li><a href="./sites-fiables-verifies.html">Sites Fiables et Vérifiés</a></li>
+    <li><a href="./nouveaux-casinos.html">Nouveaux Casinos Recommandés</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </header>
+
+<main class="styled-section">
+  <h1>Nouvelles Sélections de Confiance</h1>
+
+  <p>
+    Cette sélection évolue régulièrement, car dans l’univers du jeu en ligne, les plateformes changent vite de réputation.
+    Ce sont ici les dernières adresses fiables et légales que nous avons validées pour les joueurs français.
+  </p>
+
+  <p>
+    Qu’il s’agisse de nouvelles arrivées ou de sites récemment améliorés, tous apportent quelque chose de concret :
+    bonus intéressants, interface plus moderne, assistance rapide… ou tout simplement un vent de fraîcheur face aux géants habituels.
+  </p>
+
+  <p>
+    Envie de nouveauté ? C’est ici que ça commence.
+  </p>
+</main>
+
+
+    <footer class="footer">
+      <div class="container">
+        <a href="https://casinosenlignepro.com/"><h3>Casino Senligne Pro</h3></a>
+        <div class="footer-info">
+          <div class="footer-text">
+            <p>
+              Casino Senligne Pro ne souhaite pas que ses informations soient
+              utilisées illégalement. Il vous revient de respecter l’âge légal
+              et les conditions des opérateurs de jeu. En continuant à naviguer,
+              vous acceptez nos conditions d’utilisation et notre politique de
+              confidentialité. Casino Senligne Pro soutient la lutte contre le
+              jeu excessif avec SOS Joueurs (0810 600 115)
+            </p>
+            <p>
+              Contenu sponsorisé – Nous percevons une commission des opérateurs
+              mentionnés.
+            </p>
+          </div>
+          <div class="footer-respons">
+            <div class="age-red"><p>18+</p></div>
+            <div class="age-text"><p>Conditions générales en vigueur.</p></div>
+          </div>
+        </div>
+        <div class="footer-menu">
+          <div class="nav">
+            <ul>
+              <li><a href="">Jeu responsable</a></li>
+              <li><a href="">Politique relative aux cookies</a></li>
+              <li>
+                <a href="">Conditions d’utilisation</a>
+              </li>
+              <li>
+                <a href="">Politique de confidentialité</a>
+              </li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+          <div class="coop"><p>Casino Senligne Pro © 2025</p></div>
+        </div>
+      </div>
+    </footer>
+    <div id="age-popup" class="age-popup-overlay">
+      <div class="age-popup">
+        <h2>Vous avez 18 ans ou plus ?</h2>
+        <p>
+          Ce site est réservé aux personnes majeures. Veuillez confirmer votre
+          âge.
+        </p>
+        <div class="age-buttons">
+          <button id="age-yes">Oui, j’ai 18+</button>
+          <button id="age-no">Non</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const popup = document.getElementById("age-popup");
+        const yesBtn = document.getElementById("age-yes");
+        const noBtn = document.getElementById("age-no");
+
+        yesBtn.addEventListener("click", function () {
+          popup.style.display = "none";
+        });
+
+        noBtn.addEventListener("click", function () {
+          window.location.href = "https://www.google.com";
+        });
+      });
+    </script>
+    <div id="cookie-popup" class="cookie-popup-overlay">
+      <div class="cookie-popup">
+        <p>
+          Ce site utilise des cookies pour améliorer votre expérience. En
+          continuant, vous acceptez notre
+          <a href="./cookies.php" target="_blank">Politique relative aux cookies</a>.
+        </p>
+        <button id="accept-cookies">Accepter</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cookiePopup = document.getElementById("cookie-popup");
+        const acceptBtn = document.getElementById("accept-cookies");
+
+        if (!localStorage.getItem("cookiesAccepted")) {
+          cookiePopup.style.display = "flex";
+        }
+
+        acceptBtn.addEventListener("click", function () {
+          localStorage.setItem("cookiesAccepted", "true");
+          cookiePopup.style.display = "none";
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.querySelector(".dropdown-toggle");
+        const menu = toggle.querySelector(".dropdown-menu");
+
+        toggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        });
+
+        document.addEventListener("click", function () {
+          menu.style.display = "none";
+        });
+      });
+    </script>
+  
+
+</body></html>
