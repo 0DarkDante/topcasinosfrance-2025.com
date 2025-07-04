@@ -85,13 +85,27 @@
               <li>
                 <a href="">Politique de confidentialité</a>
               </li>
-              <li><a href="">Contact</a></li>
+              <li><a href="#" id="contactLink">Contact</a></li>
             </ul>
           </div>
           <div class="coop"><p>Casino Senligne Pro © 2025</p></div>
         </div>
       </div>
     </footer>
+
+    <div class="contact-overlay" id="contactModal">
+  <div class="contact-modal-content">
+    <h2>Nous contacter</h2>
+    <form>
+      <input type="text" placeholder="Nom" required />
+      <input type="email" placeholder="Adresse e-mail" required />
+      <textarea placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+    <button id="closeContactModal" style="margin-top: 1rem;">Fermer</button>
+  </div>
+</div>
+
     <div id="age-popup" class="age-popup-overlay">
       <div class="age-popup">
         <h2>Vous avez 18 ans ou plus ?</h2>
@@ -162,6 +176,28 @@
           menu.style.display = "none";
         });
       });
+
+            document.addEventListener('DOMContentLoaded', () => {
+  const contactLink = document.getElementById('contactLink');
+  const contactModal = document.getElementById('contactModal');
+  const closeBtn = document.getElementById('closeContactModal');
+
+  contactLink.addEventListener('click', (e) => {
+    e.preventDefault(); // відміняємо поведінку посилання
+    contactModal.style.display = 'flex';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    contactModal.style.display = 'none';
+  });
+
+  // Додатково: закриття модалки при кліку поза нею
+  contactModal.addEventListener('click', (e) => {
+    if (e.target === contactModal) {
+      contactModal.style.display = 'none';
+    }
+  });
+});
     </script>
   
 

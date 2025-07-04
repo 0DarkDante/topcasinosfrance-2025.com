@@ -857,3 +857,113 @@ p {
     font-size: 1.05rem;
   }
 }
+
+/* modal */
+
+
+.contact-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85); /* Трохи темніший фон для кращої фокусування */
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px); /* Трошки сильніше розмиття */
+  padding: 1rem;
+}
+
+.contact-modal-content {
+  background: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 20px; /* Більший радіус для м’якших кутів */
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 0.3s ease-in-out;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.contact-modal-content h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.contact-modal-content input,
+.contact-modal-content textarea {
+  width: 100%;
+  margin-bottom: 1.2rem;
+  padding: 0.85rem 1.2rem;
+  border: 1.5px solid #ccc;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.contact-modal-content input:focus,
+.contact-modal-content textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+
+.contact-modal-content textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.contact-modal-content button[type="submit"] {
+  width: 100%;
+  padding: 0.9rem 0;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-weight: 700;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 1.15rem;
+  letter-spacing: 0.03em;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-modal-content button[type="submit"]:hover {
+  background-color: #43a047;
+  box-shadow: 0 0 10px #43a047aa;
+}
+
+#closeContactModal {
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  background: transparent;
+  border: none;
+  color: #666;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+#closeContactModal:hover {
+  color: #4caf50;
+}
+
+/* Анімація появи */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
