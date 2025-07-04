@@ -59,7 +59,7 @@ p {
 .header {
   /* border-bottom: solid 1px #000; */
 
-  background-color: var(--primary);
+  background-color: var(--secondary);
   color: white;
   border-bottom: none;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -344,7 +344,7 @@ p {
 
 .footer {
   margin-top: 80px;
-  background-color: #303236;
+  background-color: #203f7c;
   padding-top: 50px;
   color: #fff;
 }
