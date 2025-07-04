@@ -39,7 +39,7 @@ p {
 
 .responsible-block {
   /* background-color: #9d0613; */
-  background-color: var(--secondary); /* Червоний замість темно-червоного */
+  background-color: #2d0202;
   color: #fff;
   font-size: 12px;
 }
@@ -151,7 +151,7 @@ p {
 }
 
 .sites-item {
-  background-color: #000;
+  background-color: #131366;
   color: #fff;
   margin-bottom: 20px;
   padding: 50px;
@@ -195,14 +195,14 @@ p {
 .button-bckg {
   color: #000;
   font-weight: 600;
-  background-color: #99aaff;
-  border: solid 2px #99aaff;
+  background-color: #6db73c;
+  border: solid 2px #6db73c;;
   text-transform: uppercase;
   padding: 10px 25px;
   border-radius: 30px;
 }
 .button-bckg:hover {
-  border: solid 2px #e4fe98;
+  border: solid 2px #6db73c;
 }
 .button-text {
   color: #e4fe98;
@@ -240,7 +240,7 @@ p {
   padding: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s, box-shadow 0.3s;
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid #ff0000;
 }
 
 .sites-item:hover {
@@ -256,7 +256,7 @@ p {
 }
 
 .bonus .size-text {
-  color: var(--secondary);
+  color: #0060ef;
 }
 .responsable-info {
   padding: 60px;
@@ -327,7 +327,7 @@ p {
   display: flex;
   justify-content: space-between;
   flex: 1;
-  background-color: #1b1b1c;
+  background-color: #131366;
   padding: 40px;
   border-radius: 30px;
 }
@@ -718,12 +718,12 @@ p {
 
 /* Анімація кнопок */
 .button-bckg {
-  background: var(--secondary);
+  background: #6db73c;
   transition: all 0.3s;
 }
 
 .button-bckg:hover {
-  background: #9b2c2c;
+  background: #6db73c;
   transform: scale(1.05);
 }
 
