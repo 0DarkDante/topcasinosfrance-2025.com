@@ -382,7 +382,7 @@ p {
 
 .nav ul {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   list-style: none;
   padding: 0;
 }
@@ -754,3 +754,31 @@ p {
   }
 
 }
+
+.nav ul li a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+  color: #ff4d4d; /* Яскраво-червоний */
+}
+
+.nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background-color: #ff4d4d; /* Такий самий червоний */
+  transition: width 0.4s ease;
+}
+
+.nav ul li a:hover::after {
+  width: 100%;
+}
+
