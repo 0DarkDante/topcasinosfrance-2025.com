@@ -967,3 +967,117 @@ p {
     transform: translateY(0);
   }
 }
+
+/* cookie */
+#cookie-consent {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#cookie-consent .cookie-popup {
+  background: #1e1e1e;
+  color: #f1f1f1;
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  animation: fadeInScale 0.35s ease forwards;
+}
+
+#cookie-consent .cookie-popup h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+#cookie-consent .cookie-popup p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #ddd;
+  margin-bottom: 2rem;
+}
+
+#cookie-consent .cookie-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+#cookie-consent button {
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  user-select: none;
+}
+
+#accept-cookies {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: white;
+}
+
+#accept-cookies:hover {
+  background: linear-gradient(135deg, #66bb6a, #388e3c);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
+}
+
+#reject-cookies {
+  background: #444;
+  color: #bbb;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+#reject-cookies:hover {
+  background: #666;
+  color: #eee;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  #cookie-consent .cookie-popup {
+    padding: 1.5rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  #cookie-consent .cookie-popup h2 {
+    font-size: 1.5rem;
+  }
+
+  #cookie-consent .cookie-popup p {
+    font-size: 1rem;
+  }
+
+  #cookie-consent button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}

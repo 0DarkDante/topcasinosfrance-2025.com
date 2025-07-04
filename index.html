@@ -271,13 +271,13 @@
         <div class="footer-menu">
           <div class="nav">
             <ul>
-              <li><a href="">Jeu responsable</a></li>
-              <li><a href="">Politique relative aux cookies</a></li>
+              <li><a href="responsable.html">Jeu responsable</a></li>
+              <li><a href="politiqu.html">Politique relative aux cookies</a></li>
               <li>
-                <a href="">Conditions d’utilisation</a>
+                <a href="conditions.html">Conditions d’utilisation</a>
               </li>
               <li>
-                <a href="">Politique de confidentialité</a>
+                <a href="politique.html">Politique de confidentialité</a>
               </li>
               <li><a href="#" id="contactLink">Contact</a></li>
             </ul>
@@ -286,6 +286,23 @@
         </div>
       </div>
     </footer>
+
+<div id="cookie-consent">
+  <div class="cookie-popup">
+    <h2>Nous respectons votre vie privée</h2>
+    <p>
+      Nous utilisons des cookies pour améliorer votre expérience de navigation, vous proposer des contenus personnalisés et analyser notre trafic.
+      En cliquant sur « Accepter tout », vous consentez à l'utilisation de cookies.
+    </p>
+    <div class="cookie-buttons">
+      <button id="accept-cookies">Accepter tout</button>
+      <button id="reject-cookies">Tout refuser</button>
+    </div>
+  </div>
+</div>
+
+
+
 
     <div class="contact-overlay" id="contactModal">
   <div class="contact-modal-content">
@@ -313,6 +330,8 @@
         </div>
       </div>
     </div>
+
+
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -395,6 +414,30 @@
   });
 });
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const popup = document.getElementById('cookie-consent');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const rejectBtn = document.getElementById('reject-cookies');
+
+    // Показати банер, якщо ще немає збереженого рішення
+    if (!localStorage.getItem('cookieConsent')) {
+      popup.style.display = 'flex';
+    }
+
+    acceptBtn.addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'accepted');
+      popup.style.display = 'none';
+    });
+
+    rejectBtn.addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'rejected');
+      popup.style.display = 'none';
+    });
+  });
+</script>
+
 
 
 </body></html>
